@@ -42,11 +42,11 @@ def vol_filter(image):
     
     return image
     
-#%% Main Parameters 
+# Main Parameters 
 
 stack_path = r'\Users\aishw\Desktop\ImgProc\zstack\PythonVer\Ver2\Ver2.tif'
 
-#%% Main Method 
+# Main Method 
 
 stack = io.imread(stack_path) #tif stack, shape: num_frames, height, width, dtype: uint8
 
@@ -66,10 +66,7 @@ rmv = []
 
 for i in range(len(counts)):
     if counts[i] < volume_thres:
-        rmv.append(i)
-        
-        
-#%% 
+        rmv.append(i) 
         
 for i in range(50):
     image = array[i]
